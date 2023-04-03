@@ -37,6 +37,10 @@ int main()
             create_drive_direct(500,480);
         }
     }
+    create_drive_direct(200,-200);
+    msleep(885);
+    create_drive_direct(200,200);
+    msleep(885);
     create_disconnect();
     return 0;
 }

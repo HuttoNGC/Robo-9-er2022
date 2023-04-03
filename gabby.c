@@ -7,8 +7,16 @@ int main()
 	char ch1;
 	enable_servos();
 	while (x == 1){
-    	printf("what would you like me to do f:forward,b:backward,t:turn  : ");
+    	printf("what would you like me to do f:forward,b:backward,t:turn c to run drive coad   : ");
     	scanf("%c", &ch1);
+      if (ch1 == 'c'){
+			fd(0);
+      fd(1);
+			msleep(100);
+      bk(0);
+      fd(1);
+			msleep(100);
+    	} 
     	if (ch1 == 'b'){
 			printf("for how long would you like to drive forward in ms: ");
 			scanf("%d", &sleep);  
